@@ -1,9 +1,10 @@
 mod auth_manager;
 
+
 use auth_manager::AuthManager;
 
 fn print_welcome() {
-    println!("\n\n\n\n\n"); 
+    println!("\n\n\n"); 
     println!("Hello, World! Welcome to ...");
     println!(r#"      
       ___           ___         ___                                  ___           ___                        ___           ___                 
@@ -17,10 +18,11 @@ fn print_welcome() {
    \/_/:/  /     \:\  \      \:\/:/  /   \/__\:\  \     \: /  /   \:\~~\        \:\/:/  /    \:\__|:|__|   \/_/:/  /     \:\~~\      ~~~~\:\  \ 
      /:/  /       \:\__\      \::/  /         \:\__\    /:/  /     \:\__\        \::/  /      \::::/__/      /:/  /       \:\__\          \:\__\ 
      \/__/         \/__/       \/__/           \/__/    \/__/       \/__/         \/__/        ~~~~          \/__/         \/__/           \/__/"#);
-    println!("\n\n\n\n\n");
+    println!("\n\n\n");
 }
 
 fn main() { 
     print_welcome();
-    let my_auth = AuthManager::new();
+    AuthManager::new();
+    AuthManager::prompt_id();
 }
