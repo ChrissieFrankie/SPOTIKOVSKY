@@ -23,8 +23,8 @@ fn print_welcome() {
 
 fn main() { 
     print_welcome();
-    let my_auth_manager = AuthManager::new();
-    let my_auth_manager = AuthManager::prompt_user_id(my_auth_manager);
+    let mut my_auth_manager = AuthManager::new();
+    my_auth_manager.prompt_user_id();
     let user_id = AuthManager::get_user_id(my_auth_manager);
     print!("Your Spotify user id is {user_id}");
 }
