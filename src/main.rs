@@ -1,4 +1,10 @@
-fn print_spotikovsky_ascii_art() {
+mod auth_manager;
+
+use auth_manager::AuthManager;
+
+fn print_welcome() {
+    println!("\n\n\n\n\n"); 
+    println!("Hello, World! Welcome to ...");
     println!(r#"      
       ___           ___         ___                                  ___           ___                        ___           ___                 
      /\__\         /\  \       /\  \                                /|  |         /\  \          ___         /\__\         /|  |                
@@ -11,13 +17,10 @@ fn print_spotikovsky_ascii_art() {
    \/_/:/  /     \:\  \      \:\/:/  /   \/__\:\  \     \: /  /   \:\~~\        \:\/:/  /    \:\__|:|__|   \/_/:/  /     \:\~~\      ~~~~\:\  \ 
      /:/  /       \:\__\      \::/  /         \:\__\    /:/  /     \:\__\        \::/  /      \::::/__/      /:/  /       \:\__\          \:\__\ 
      \/__/         \/__/       \/__/           \/__/    \/__/       \/__/         \/__/        ~~~~          \/__/         \/__/           \/__/"#);
+    println!("\n\n\n\n\n");
 }
 
-fn main() {
-    println!("\n\n\n");
-    println!("\n\n\n");
-    println!("Hello, World! Welcome to ...");
-    print_spotikovsky_ascii_art();
-    println!("\n\n\n");
-    println!("\n\n\n"); 
+fn main() { 
+    print_welcome();
+    let my_auth = AuthManager::new();
 }
