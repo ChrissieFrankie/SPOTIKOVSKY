@@ -16,17 +16,15 @@ impl AuthManager
         }
     }
 
-    pub fn prompt_id()-> Self
+    pub fn prompt_user_id()-> Self
     {
-        print!("Enter your userid: https://open.spotify.com/user/");
+        print!("Enter your profile URL:");
         std::io::stdout().flush().unwrap();
 
         let mut input = String::new();
-        std::io::stdin().read_line(&mut input).expect("Failed to read");
-        println!("You've provided the following unique ID: {input}");
-        
+        std::io::stdin().read_line(&mut input).expect("Failed to read"); 
         Self{
-            user_id: input.trim().to_string()
+            user_id: input.rsplit('/').last().unwrap_or("").to_string()
         }
     }
 }

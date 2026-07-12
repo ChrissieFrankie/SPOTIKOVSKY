@@ -24,5 +24,5 @@ fn print_welcome() {
 fn main() { 
     print_welcome();
     AuthManager::new();
-    AuthManager::prompt_id();
+    AuthManager::prompt_user_id();
 }
